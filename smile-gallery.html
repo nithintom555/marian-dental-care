@@ -1,0 +1,351 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Smile Gallery | Marian Dental Care, Uzhavoor, Kottayam.">
+
+    <title>Smile Gallery | Marian Dental Care</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Smile Gallery: compact two-column layout -->
+    <style>
+        .gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 22px !important;
+            align-items: start;
+        }
+
+        .gallery-item {
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .gallery-item figcaption {
+            padding: 12px 4px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .gallery-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 26px;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 12px !important;
+            }
+
+            .gallery-item img {
+                height: 135px;
+            }
+
+            .gallery-item figcaption {
+                padding: 8px 2px;
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .gallery-filters {
+                gap: 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Opening Hours and Contact -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>Mon–Sat: 9:00 AM–6:00 PM</span>
+            <span>Sunday: Closed</span>
+            <a href="tel:+917558859848">+91 75588 59848</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Marian Dental Care home">
+                <strong>MARIAN</strong>
+                <small>DENTAL CARE</small>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <nav class="navlinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="our-story.html">Our Story</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="smile-gallery.html">Smile Gallery</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+
+            <a class="callbtn" href="tel:+917558859848">Call Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Heading -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Smile Gallery</h1>
+                <p>
+                    Explore photographs of the clinic and treatment images.
+                    Patient result images can be added when approved photographs are available.
+                </p>
+            </div>
+        </section>
+
+        <!-- Smile Gallery -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Gallery Filters -->
+                <div class="gallery-filters" role="group" aria-label="Filter gallery">
+                    <button class="filter-btn active" type="button"
+                        data-filter="all" aria-pressed="true">
+                        All
+                    </button>
+
+                    <button class="filter-btn" type="button"
+                        data-filter="clinic" aria-pressed="false">
+                        Clinic Gallery
+                    </button>
+
+                    <button class="filter-btn" type="button"
+                        data-filter="results" aria-pressed="false">
+                        Treatment Images
+                    </button>
+                </div>
+
+                <!-- Two images per row -->
+                <div class="gallery-grid">
+
+                    <figure class="gallery-item" data-category="clinic">
+                        <img src="assets/images/clinic-entrance.webp"
+                            alt="Entrance area at Marian Dental Care" loading="lazy">
+                        <figcaption>Clinic entrance</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="clinic">
+                        <img src="assets/images/clinic-exterior.jpeg"
+                            alt="Exterior facade of Marian Dental Care" loading="lazy">
+                        <figcaption>Clinic exterior</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="clinic">
+                        <img src="assets/images/reception.webp"
+                            alt="Reception and waiting area at Marian Dental Care" loading="lazy">
+                        <figcaption>Reception and waiting area</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/root-canal-treatment.jpg"
+                            alt="Root Canal Treatment illustration" loading="lazy">
+                        <figcaption>Root Canal Treatment</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/dental-restoration-fillings.jpg"
+                            alt="Dental Restoration and Fillings illustration" loading="lazy">
+                        <figcaption>Dental Restoration &amp; Fillings</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/orthodontics-braces.jpg"
+                            alt="Orthodontics and Braces illustration" loading="lazy">
+                        <figcaption>Orthodontics &amp; Braces</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/teeth-whitening.jpg"
+                            alt="Teeth Whitening illustration" loading="lazy">
+                        <figcaption>Teeth Whitening</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/dental-implants.jpg"
+                            alt="Dental Implants illustration" loading="lazy">
+                        <figcaption>Dental Implants</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/crowns-bridges.jpg"
+                            alt="Crowns and Bridges illustration" loading="lazy">
+                        <figcaption>Crowns &amp; Bridges</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/tooth-extraction.jpg"
+                            alt="Tooth Extraction illustration" loading="lazy">
+                        <figcaption>Tooth Extraction</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/wisdom-tooth-removal.jpg"
+                            alt="Wisdom Tooth Removal illustration" loading="lazy">
+                        <figcaption>Wisdom Tooth Removal</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/scaling-polishing.jpg"
+                            alt="Scaling and Polishing illustration" loading="lazy">
+                        <figcaption>Scaling &amp; Polishing</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/gum-treatment.jpg"
+                            alt="Gum Treatment illustration" loading="lazy">
+                        <figcaption>Gum Treatment</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/pediatric-dentistry.jpg"
+                            alt="Pediatric Dentistry illustration" loading="lazy">
+                        <figcaption>Pediatric Dentistry</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/dentures.jpg"
+                            alt="Dentures illustration" loading="lazy">
+                        <figcaption>Dentures</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/cosmetic-dentistry.jpg"
+                            alt="Cosmetic Dentistry illustration" loading="lazy">
+                        <figcaption>Cosmetic Dentistry</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/dental-veneers.jpg"
+                            alt="Dental Veneers illustration" loading="lazy">
+                        <figcaption>Dental Veneers</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/smile-makeover.jpg"
+                            alt="Smile Makeover illustration" loading="lazy">
+                        <figcaption>Smile Makeover</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item" data-category="results">
+                        <img src="assets/images/emergency-dental-care.jpg"
+                            alt="Emergency Dental Care illustration" loading="lazy">
+                        <figcaption>Emergency Dental Care</figcaption>
+                    </figure>
+
+                </div>
+
+                <p class="small-note" style="margin-top: 22px;">
+                    Treatment images are illustrative, not patient before-and-after results.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+
+            <div>
+                <a class="brand" href="index.html">
+                    <strong>MARIAN</strong>
+                    <small>DENTAL CARE</small>
+                </a>
+
+                <p>
+                    Professional and compassionate dental care
+                    for you and your family.
+                </p>
+
+                <a class="btn" href="tel:+917558859848">
+                    Call Now · +91 75588 59848
+                </a>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="our-story.html">Our Story</a>
+                    <a href="treatments.html">Treatments</a>
+                    <a href="smile-gallery.html">Smile Gallery</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="why-choose-us.html">Why Choose Us</a>
+                    <a href="our-technology.html">Our Technology</a>
+                    <a href="directors.html">Meet Our Directors</a>
+                    <a href="specialist-team.html">Specialist Team</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3>Visit Our Clinic</h3>
+                <p>Uzhavoor, Kottayam, Kerala, India.</p>
+
+                <p>
+                    Monday–Saturday: 9:00 AM–6:00 PM<br>
+                    Sunday: Closed
+                </p>
+
+                <a
+                    href="https://maps.app.goo.gl/tphyu6dmDBAoAutp6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Get Directions ↗
+                </a>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <span>
+                © <span data-year></span>
+                Marian Dental Care. All rights reserved.
+            </span>
+
+            <span>Made for healthier, more confident smiles.</span>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a
+        class="floating-call"
+        href="tel:+917558859848"
+        aria-label="Call Marian Dental Care"
+    >
+        ☎ Call Now
+    </a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

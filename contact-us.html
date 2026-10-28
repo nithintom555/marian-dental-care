@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Marian Dental Care | Uzhavoor, Kottayam</title>
+  <meta name="description" content="Contact Marian Dental Care in Uzhavoor, Kottayam, Kerala. Find our location, opening hours and directions.">
+  <meta name="theme-color" content="#073b3b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --teal: #073b3b;
+      --teal-light: #0c6868;
+      --turquoise: #39c6bf;
+      --text: #193333;
+      --muted: #647777;
+      --background: #f5f9f8;
+      --white: #ffffff;
+      --border: #e1ebea;
+      --radius: 18px;
+      --shadow: 0 12px 36px rgba(7, 59, 59, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Top information bar */
+
+    .topbar {
+      background: var(--teal);
+      color: #e8ffff;
+      font-size: 12px;
+    }
+
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 7px 0;
+    }
+
+    .topbar-group {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .topbar a:hover {
+      color: var(--turquoise);
+    }
+
+    /* Header */
+
+    .site-header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-direction: column;
+      line-height: 1.05;
+      flex-shrink: 0;
+    }
+
+    .logo-main {
+      font-family: "Manrope", sans-serif;
+      color: var(--teal);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .logo-sub {
+      color: var(--teal-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-top: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links > a:not(.nav-cta) {
+      color: #415b5b;
+      transition: color 0.2s;
+    }
+
+    .nav-links > a:not(.nav-cta):hover,
+    .nav-links > a.active {
+      color: var(--teal-light);
+    }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 47px;
+      padding: 12px 21px;
+      border-radius: 9px;
+      background: var(--turquoise);
+      color: #073b3b;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--turquoise);
+      transition: transform 0.2s, background 0.2s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .nav-cta:hover,
+    .button:hover {
+      transform: translateY(-2px);
+      background: #6cddd6;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--teal);
+      border-color: #b9d4d1;
+    }
+
+    .button-outline:hover {
+      background: #e9f6f4;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--teal);
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* Page introduction */
+
+    .page-intro {
+      padding: 64px 0 42px;
+      text-align: center;
+      animation: fadeUp 0.65s ease both;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      letter-spacing: 2.2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    .page-intro h1 {
+      font-size: clamp(34px, 5vw, 51px);
+      font-weight: 800;
+      letter-spacing: -1.8px;
+      margin-bottom: 16px;
+    }
+
+    .page-intro p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    /* Contact section */
+
+    .contact-section {
+      padding: 0 0 75px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .map-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-width: 0;
+      animation: fadeUp 0.65s ease both;
+    }
+
+    .map-card {
+      animation-delay: 0.1s;
+    }
+
+    .contact-card {
+      padding: 30px;
+    }
+
+    .contact-card h2,
+    .map-heading h2 {
+      font-size: 24px;
+      margin-bottom: 9px;
+      letter-spacing: -0.7px;
+    }
+
+    .card-intro {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 26px;
+    }
+
+    .detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      border-radius: 12px;
+      background: #e8f7f5;
+      color: var(--teal-light);
+      font-size: 20px;
+    }
+
+    .detail-content {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .detail-content h3 {
+      font-size: 14px;
+      margin: 1px 0 5px;
+    }
+
+    .detail-content p,
+    .detail-content a {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .detail-content a:hover {
+      color: var(--teal-light);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 13px;
+      padding: 5px 0;
+    }
+
+    .hours-row span:first-child {
+      color: var(--muted);
+    }
+
+    .hours-row .closed {
+      color: #bd4a43;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .contact-actions .button {
+      flex: 1 1 145px;
+    }
+
+    /* Map */
+
+    .map-heading {
+      padding: 25px 25px 18px;
+    }
+
+    .map-heading p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 450px;
+      display: block;
+      border: 0;
+      background: #e7efed;
+    }
+
+    .map-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      padding: 18px 22px;
+    }
+
+    .map-bottom p {
+      color: var(--muted);
+      font-size: 12px;
+      flex: 1 1 180px;
+    }
+
+    /* Visit CTA */
+
+    .visit-section {
+      padding: 0 0 75px;
+    }
+
+    .visit-box {
+      background: var(--teal);
+      color: white;
+      border-radius: 22px;
+      padding: 35px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .visit-box h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      margin-bottom: 9px;
+    }
+
+    .visit-box p {
+      color: #c7dddd;
+      font-size: 13px;
+      max-width: 570px;
+    }
+
+    .visit-box .button {
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: #052e2e;
+      color: #d5e8e6;
+      padding: 43px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 32px;
+    }
+
+    .footer-logo .logo-main {
+      color: white;
+    }
+
+    .footer-logo .logo-sub {
+      color: var(--turquoise);
+    }
+
+    .footer-description {
+      color: #afc9c7;
+      max-width: 310px;
+      font-size: 12px;
+      margin-top: 17px;
+    }
+
+    .footer-column h3 {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      display: block;
+      color: #afc9c7;
+      font-size: 12px;
+      margin: 9px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: var(--turquoise);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+      color: #91b2af;
+    }
+
+    /* Animation */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .map-frame {
+        height: 420px;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .topbar-group {
+        justify-content: center;
+        gap: 8px 14px;
+      }
+
+      .header-inner {
+        min-height: 72px;
+      }
+
+      .logo-main {
+        font-size: 22px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding: 20px 5% 24px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links > a {
+        padding: 5px 0;
+      }
+
+      .nav-links .nav-cta {
+        padding: 12px 20px;
+      }
+
+      .page-intro {
+        padding: 46px 0 30px;
+      }
+
+      .page-intro h1 {
+        letter-spacing: -1px;
+      }
+
+      .contact-section,
+      .visit-section {
+        padding-bottom: 45px;
+      }
+
+      .contact-card {
+        padding: 22px;
+      }
+
+      .map-heading {
+        padding: 22px 20px 16px;
+      }
+
+      .map-frame {
+        height: 370px;
+      }
+
+      .visit-box {
+        padding: 27px 24px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .visit-box .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 20px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hours-row {
+        font-size: 12px;
+      }
+
+      .contact-actions {
+        flex-direction: column;
+      }
+
+      .contact-actions .button {
+        width: 100%;
+      }
+
+      .map-frame {
+        height: 320px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP INFORMATION BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-group">
+        <span>◷ Monday–Saturday: 9:00 AM–6:00 PM</span>
+        <span>Sunday: Closed</span>
+      </div>
+
+      <div class="topbar-group">
+        <a href="tel:+917558859848">☎ +91 75588 59848</a>
+        <span>Uzhavoor, Kottayam, Kerala</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Marian Dental Care home">
+        <span class="logo-main">MARIAN</span>
+        <span class="logo-sub">DENTAL CARE</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="our-story.html">About Us</a>
+        <a href="treatments.html">Treatments</a>
+        <a href="our-doctors.html">Our Doctors</a>
+        <a href="contact-us.html" class="active">Contact Us</a>
+        <a href="smile-gallery.html">Smile Gallery</a>
+        <a class="nav-cta" href="tel:+917558859848">Call Now ↗</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-intro">
+      <div class="container">
+        <span class="eyebrow">We are here to help</span>
+        <h1>Contact Marian Dental Care</h1>
+        <p>
+          Have a question or need a dental appointment?
+          Contact our clinic or use the map below to find us in Uzhavoor, Kottayam.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS AND MAP -->
+    <section class="contact-section">
+      <div class="container contact-layout">
+
+        <!-- CONTACT DETAILS -->
+        <div class="contact-card">
+          <span class="eyebrow">Get in touch</span>
+          <h2>We would love to hear from you</h2>
+          <p class="card-intro">
+            Contact us for appointment enquiries and information about our dental treatments.
+          </p>
+
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">☎</div>
+            <div class="detail-content">
+              <h3>Phone</h3>
+              <a href="tel:+917558859848">+91 75588 59848</a>
+              <p>Call for appointment enquiries.</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">⌖</div>
+            <div class="detail-content">
+              <h3>Clinic Location</h3>
+              <p>Marian Dental Care, Uzhavoor, Kottayam, Kerala 686634</p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=9.789101623546825%2C76.60976239695673"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  View clinic directions ↗
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon" aria-hidden="true">◷</div>
+            <div class="detail-content">
+              <h3>Opening Hours</h3>
+
+              <div class="hours-row">
+                <span>Monday–Saturday</span>
+                <strong>9:00 AM–6:00 PM</strong>
+              </div>
+
+              <div class="hours-row">
+                <span>Sunday</span>
+                <strong class="closed">Closed</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button" href="tel:+917558859848">
+              ☎ Call Now
+            </a>
+
+            <a
+              class="button button-outline"
+              href="https://www.google.com/maps/dir/?api=1&destination=9.789101623546825%2C76.60976239695673"
+              target="_blank"
+              rel="noopener noreferrer">
+              ↗ Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- GOOGLE MAP -->
+        <div class="map-card">
+          <div class="map-heading">
+            <span class="eyebrow">Find our clinic</span>
+            <h2>Visit Marian Dental Care</h2>
+            <p>Uzhavoor, Kottayam, Kerala 686634</p>
+          </div>
+
+          <!-- Embed-compatible URL using the clinic coordinates -->
+          <iframe
+            class="map-frame"
+            title="Marian Dental Care location in Uzhavoor"
+            src="https://maps.google.com/maps?q=9.789101623546825%2C76.60976239695673&z=18&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+
+          <div class="map-bottom">
+            <p>
+              Open Google Maps for directions to the selected clinic location.
+            </p>
+
+            <a
+              class="button button-outline"
+              href="https://www.google.com/maps/dir/?api=1&destination=9.789101623546825%2C76.60976239695673"
+              target="_blank"
+              rel="noopener noreferrer">
+              Open Directions ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="visit-section">
+      <div class="container">
+        <div class="visit-box">
+          <div>
+            <h2>Ready to take care of your smile?</h2>
+            <p>
+              Contact Marian Dental Care to enquire about an appointment.
+              We are located in Uzhavoor, Kottayam.
+            </p>
+          </div>
+
+          <a class="button" href="tel:+917558859848">
+            Call to Enquire ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-main">MARIAN</span>
+            <span class="logo-sub">DENTAL CARE</span>
+          </a>
+
+          <p class="footer-description">
+            Professional and compassionate dental care for you and your family.
+            Visit Marian Dental Care in Uzhavoor, Kottayam.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="our-story.html">About Us</a>
+          <a href="treatments.html">Treatments</a>
+          <a href="our-doctors.html">Our Doctors</a>
+          <a href="smile-gallery.html">Smile Gallery</a>
+          <a href="contact-us.html">Contact Us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Details</h3>
+          <p>Uzhavoor, Kottayam, Kerala 686634</p>
+          <a href="tel:+917558859848">+91 75588 59848</a>
+          <p>Monday–Saturday: 9 AM–6 PM</p>
+          <p>Sunday: Closed</p>
+
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=9.789101623546825%2C76.60976239695673"
+            target="_blank"
+            rel="noopener noreferrer">
+            Get Directions ↗
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="currentYear">2026</span> Marian Dental Care. All rights reserved.
+        </span>
+        <span>Uzhavoor, Kottayam, Kerala</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close the mobile menu after selecting a navigation link
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Update copyright year automatically
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
